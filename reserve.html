@@ -22,43 +22,23 @@
     <div class="main">
         <div class="home"><a href="index.html">На главную</a></div>
 
-        <div class="form-wrap">
-            <div class="profile"><img src="img/vid_lavra.jpg" style="height: 300px">
-                <h1>Записаться на обзорную экскурсию по Лавре</h1>
-            </div>
-            <form method="post" action="mail.php">
-                <div>
-                    <label>ФИО</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="radio">
-                    <select name="people">
-                        <option>Выберите количество человек</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <div class="select-arrow"></div>
-                    </select>
-                </div>
-                <div>
-                    <label>Контактный E-mail</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div>
-                    <label>Страна</label>
-                    <select name="country">
-                        <option>Выберите страну проживания</option>
-                        <option value="Россия">Россия</option>
-                        <option value="Украина">Украина</option>
-                        <option value="Беларусь">Беларусь</option>
-                    </select>
-                    <div class="select-arrow"></div>
-                </div>
-                <button type="submit">Отправить</button>
+        <div id="feedback-form">
+            <h2>Форма заказа экскурсии по Лавре</h2>
+            <form action="feedbackHandler.php" method="post">
+                <p>
+                    Введите телефон:
+                </p>
+                <input name="number" type="text" required />
+                <p>
+                    Ваша почта:
+                </p>
+                <input name="email" type="text" required />
+                <p>
+                    Количество человек:
+                </p>
+                <textarea name="people" required></textarea>
+                <br />
+                <input type="submit" value="отправить" />
             </form>
         </div>
 
