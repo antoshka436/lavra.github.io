@@ -22,25 +22,27 @@
     <div class="main">
         <div class="home"><a href="index.html">На главную</a></div>
 
-        <div id="feedback-form">
-            <h2>Форма заказа экскурсии по Лавре</h2>
-            <form action="/feedbackHandler.php" method="post">
-                <p>
-                    Введите телефон:
-                </p>
-                <input name="number" type="text" required />
-                <p>
-                    Ваша почта:
-                </p>
-                <input name="email" type="text" required />
-                <p>
-                    Количество человек:
-                </p>
-                <textarea name="people" required></textarea>
-                <br />
-                <input type="submit" value="отправить" />
-            </form>
-        </div>
+        <center><div align="left" id="cor5" class="sidebarForm">
+            <h4>Задать новый вопрос:</h4>
+            <div align="center" id="loadBar"></div>
+            <form action="form1.php" method="post" id="cForm2">
+
+                <label>Ваше имя:</label>
+                <div class="input" id="cor5">
+                    <input value="" id="posName" type="text">
+                </div>
+
+                <label>Ваш email:</label>
+                <div class="input" id="cor5">
+                    <input value="" id="posEmail" type="text">
+                </div>
+
+                <label>Ваше сообщение:</label>
+                <div class="textarea" id="cor5"><textarea id="posText"></textarea></div>
+
+                <button type="button" id="send">Отправить --></button>
+
+            </form></div></center>
 
 
         </div>
@@ -52,5 +54,40 @@
     </div>
 
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+// Форма обратной связи................................./
+
+        var regVr22 = "<div><img style="margin-bottom:-4px;" src="../load.gif" alt="Отправка..." width="16" height="16"><span style="font: 11px Verdana; color:#333; margin-left:6px;">Сообщение обрабатывается...</span></div><br>";
+
+        $("#send").click(function(){
+            $("#loadBar").html(regVr22).show();
+            var posName = $("#posName").val();
+            var posEmail = $("#posEmail").val();
+            var posText = $("#posText").val();
+            $.ajax({
+                type: "POST",
+                url: "../send.php",
+                data: {"posName": posName, "posEmail": posEmail, "posText": posText},
+                cache: false,
+                success: function(response){
+                    var messageResp = "<p style="font-family:Verdana; font-size:11px; color:green; border:1px solid #00CC00; padding:10px; margin:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; background-color:#fff;">Спасибо, <strong>";
+                    var resultStat = "!</strong> Ваше сообщение отправлено!</p>";
+                    var oll = (messageResp + posName + resultStat);
+                    if(response == 1){
+                        $("#loadBar").html(oll).fadeIn(3000);
+                        $("#posName").val("");
+                        $("#posEmail").val("");
+                        $("#posText").val("");
+                    } else {
+                        $("#loadBar").html(response).fadeIn(3000); }
+                }
+            });
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

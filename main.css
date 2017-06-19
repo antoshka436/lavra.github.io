@@ -102,39 +102,83 @@ body{
 
 
 
-#feedback-form{
-    background-color: #ececec;
-    margin: 50px auto 0;
-    text-align: center;
-    width: 430px;
-    padding: 15px;
+.sidebarForm {
+    background: #f6f6f6;
+    box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    width: 420px;
 }
-#feedback-form h2{
-    margin-bottom: 25px;
+
+#cor5 {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
-#feedback-form input[type=text],
-#feedback-form textarea{
-    background-color: #fff;
-    border: 1px solid #A9A9A9;
-    padding: 1px 5px;
-    width: 90%;
+
+.sidebarForm h4 {
+    font: 14px Verdana;
+    color: #333333;
+    text-align: left;
+    padding: 10px 10px 0 10px;
 }
-#feedback-form input[type=text]{
+
+.sidebarForm label {
+    font: 12px Verdana;
+    color: #333;
+    padding: 10px;
+}
+
+.sidebarForm .input {
+    width: 170px;
+    height: 20px;
+    overflow: hidden;
+    background: white;
+    border: solid 1px #DFE2E5;
+    margin: 5px 0 10px 10px;
+    box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+}
+
+.sidebarForm .input input {
+    width: 165px;
     height: 26px;
+    background: white;
+    margin: -3px 0 0 -5px;
+    padding: 0px 8px;
+    border: none;
+    background: transparent;
 }
-#feedback-form textarea{
-    height: 75px;
-    padding-top: 5px;
+
+.sidebarForm .textarea {
+    height: 70px;
+    width: 320px;
+    overflow: hidden;
+    background: white;
+    border: solid 1px #DFE2E5;
+    margin: 5px 0 10px 10px;
+    box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
 }
-#feedback-form input[type=submit]{
-    margin-top: 15px;
-    background-color: #0B7BB5;
-    border: 1px solid #CCCCCC;
+
+.sidebarForm .textarea textarea {
+    width: 316px;
+    height: 66px;
+    background: white;
+    border: none;
+    resize:none;
+}
+
+.sidebarForm button {
+    border: 2px #ccc solid;
+    width: 150px;
+    height: 25px;
+    font: 12px Verdana;
+    font-weight: 700;
     color: #FFFFFF;
-    font-weight: bold;
-    height: 40px;
-    line-height: 40px;
-    text-transform: uppercase;
-    width: 225px;
-    cursor: pointer;
+    background-color: #cc0000;
+    padding-bottom: 2px;
+    margin: 5px 0 15px 135px;
 }
