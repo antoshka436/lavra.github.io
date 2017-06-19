@@ -87,7 +87,35 @@ body{
 .main h1{
     text-align: center;
 }
+.user{
+    float: left;
+}
 
+.about{
+    margin-left: 10px;
+    text-align: center;
+    width: 40px;
+    padding: 10px;
+    border-color: #333333;
+    border: 2px;
+    background-color: #f6f6f6;
+
+}
+.reserve{
+    margin-right: 13px;
+    margin-top: -52px;
+    float: right;
+    text-align: center;
+    width: 85px;
+    padding: 7px;
+    border-color: #333333;
+    border: 2px;
+    background-color: #f6f6f6;
+
+}
+.header a{
+    text-decoration: none;
+}
 #mymap{
     width: auto;
     margin: 7px;
