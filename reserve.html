@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказать экскурсию</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="conteiner">
+    <div class="header">
+        <h1>Свято- Троицкая<br>Сергиева Лавра</h1>
+    </div>
+    <div class="sidebar">
+        <ul><h4>Достопримечательности</h4>
+            <li><a href="troickii.html">Троицкий собор</a></li>
+            <li><a href="uspenskii.html">Успенский собор</a></li>
+            <li><a href="sushilnaya.html">Сушильная башня</a></li>
+            <li><a href="pamyatnik.html">Памятник Сергию Радонежскому</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="home"><a href="index.html">На главную</a></div>
+
+        <h1>Записаться на обзорную экскурсию по Лавре</h1>
+        <form class="contact_form" action="contact-form.php" method="post">
+            <p>
+                <label for="name">Имя:</label>
+                <input type="text"  name="name" id="name" placeholder="Введите ваше имя" required />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Введите электронный адрес" required />
+                <span class="form_hint">Правильный формат "name@something.com"</span>
+            </p>
+            <p>
+                <label for="tel">Телефон:</label>
+                <input type="tel" name="tel" id="tel" placeholder="Введите номер телефона" required />
+                <span class="form_hint">Правильный формат "+7-123-4567890"</span>
+            </p>
+            <p>
+                <label for="website">Количество человек:</label>
+                <input type="url" name="website" id="website" placeholder="Введите количество человек" />
+
+            </p>
+            <p>
+                <label for="message">Примечание:</label>
+                <textarea name="message" id="message" cols="40" rows="6" required ></textarea>
+            </p>
+            <input name="bezspama" type="text" style="display:none" value="" />
+            <p>
+                <button class="submit" type="submit">Отправить сообщение</button>
+            </p>
+        </form>
+
+    </div>
+
+    <div class="footer">
+        <p>© 2009–2016 при использовании материалов сайта прямая гиперссылка на GidGo.ru обязательна. Администрация портала не несет ответственности за информацию, размещенную пользователями.</p>
+    </div>
+
+</div>
+</body>
+</html>
