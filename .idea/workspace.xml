@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bca94494-1afd-46f9-acce-5b65c460c82d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mail.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reserve.html" afterPath="$PROJECT_DIR$/reserve.html" />
-    </list>
+    <list default="true" id="bca94494-1afd-46f9-acce-5b65c460c82d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -283,15 +279,15 @@
       <updated>1497775448816</updated>
       <workItem from="1497775450452" duration="17590000" />
       <workItem from="1497898902485" duration="4744000" />
-      <workItem from="1497907892238" duration="1830000" />
+      <workItem from="1497907892238" duration="2255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24164000" />
+    <option name="totallyTimeSpent" value="24589000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="537" y="184" width="998" height="946" extended-state="0" />
+    <frame x="537" y="184" width="998" height="946" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09775967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
