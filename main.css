@@ -102,125 +102,139 @@ body{
 
 
 
-.contact_form {
-    width:700px;
+.form-wrap {
+    margin-left: 90px;
+    width: 550px;
+    background-color: cadetblue;
+    border-radius: 20px;
 }
-
-
-.contact_form p {
-    width:650px;
-    margin:7px 10px 7px 10px;
-    padding:0px;
+.form-wrap *{transition: .1s linear}
+.profile {
+    width: 240px;
+    float: left;
+    text-align: center;
+    padding: 70px;
 }
-
-
-.contact_form label {
-    width:150px;
-    margin-top: 3px;
-    display:inline-block;
-    float:left;
-    padding:3px;
+form {
+    margin-top: -65px;
+    margin-bottom: 30px;
+    margin-left: 85px;
+    background: white;
+    float: left;
+    width: calc(100% - 240px);
+    padding: 30px;
+    border-radius: 20px 20px 20px 20px;
+    color: #7b7b7b;
 }
-.contact_form input {
-    height:20px;
-    width:220px;
-    padding:5px 8px;
+.form-wrap:after, form div:after {
+    content: "";
+    display: table;
+    clear: both;
 }
-.contact_form textarea {padding:8px; width:300px;}
-.contact_form button {margin-left:156px;}
-
-
-.contact_form input, .contact_form textarea {
-    border:1px solid #aaa;
-    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-    border-radius:2px;
-    padding-right:30px;
-    -moz-transition: padding .25s;
-    -webkit-transition: padding .25s;
-    -o-transition: padding .25s;
-    transition: padding .25s;
+form div {
+    margin-bottom: 15px;
+    position: relative;
 }
-.contact_form input:focus, .contact_form textarea:focus {
-    background: #fff;
-    border:1px solid #555;
-    box-shadow: 0 0 3px #aaa;
-    padding-right:70px;
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    margin-left: 145px;
 }
-
-
-.contact_form input:required, .contact_form textarea:required {
-    background: #fff no-repeat 98% center;
+h1:after {
+    font-size: 40px;
+    /*position: absolute;*/
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.contact_form input:required:valid, .contact_form textarea:required:valid {
-    background: #fff no-repeat 98% center;
-    box-shadow: 0 0 5px #5cd053;
-    border-color: #28921f;
+label, span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
-.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
-    background: #fff no-repeat 98% center;
-    box-shadow: 0 0 5px #d45252;
-    border-color: #b03535
+input[type="text"], input[type="email"] {
+    width: 90%;
+    padding: 10px 15px;
+    border-width: 0;
+    background: #e6e6e6;
+    outline: none;
+    margin: 0;
 }
-
-
-.form_hint {
-    background: #d45252;
-    border-radius: 3px 3px 3px 3px;
-    color: white;
-    margin-left:8px;
-    padding: 1px 6px;
-    z-index: 999;
+input[type="text"]:focus, input[type="email"]:focus {
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio label {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    line-height: 40px;
+}
+.radio input {
     position: absolute;
+    opacity: 0;
+}
+.radio-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    text-align: center;
+}
+.male:before {
+    content: "\f222";
+    font-weight: bold;
+}
+.female:before {
+    content: "\f221";
+    font-weight: bold;
+}
+.radio label:hover input ~ .radio-control,
+.radiol input:focus ~ .radio-control {
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio input:checked ~ .radio-control {
+    color: red;
+}
+select {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    background: #e6e6e6;
+    color: #7b7b7b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select::-ms-expand {
     display: none;
 }
-.form_hint::before {
-    content: "\25C0";
-    color:#d45252;
+.select-arrow {
     position: absolute;
-    top:1px;
-    left:-6px;
+    top: 38px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #7b7b7b transparent transparent transparent;
 }
-.contact_form input:focus + .form_hint {display: inline;}
-.contact_form input:required:valid + .form_hint {background: #28921f;}
-.contact_form input:required:valid + .form_hint::before {color:#28921f;}
-
-
-button.submit {
-    background-color: #68b12f;
-    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
-    background: -webkit-linear-gradient(top, #68b12f, #50911e);
-    background: -moz-linear-gradient(top, #68b12f, #50911e);
-    background: -ms-linear-gradient(top, #68b12f, #50911e);
-    background: -o-linear-gradient(top, #68b12f, #50911e);
-    background: linear-gradient(top, #68b12f, #50911e);
-    border: 1px solid #509111;
-    border-bottom: 1px solid #5b992b;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    box-shadow: inset 0 1px 0 0 #9fd574;
-    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
-    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
-    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+button {
+    padding: 10px 0;
+    border-width: 0;
+    display: block;
+    width: 120px;
+    margin: 25px auto 0;
+    background: #60e6c5;
     color: white;
-    font-weight: bold;
-    padding: 6px 20px;
-    text-align: center;
-    text-shadow: 0 -1px 0 #396715;
-}
-button.submit:hover {
-    opacity:.85;
-    cursor: pointer;
-}
-button.submit:active {
-    border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset;
-    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
-    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
-    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
-    -o-box-shadow: 0 0 10px 5px #356b0b inset;
-
+    font-size: 14px;
+    outline: none;
+    text-transform: uppercase;
 }
