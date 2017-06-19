@@ -22,7 +22,7 @@
     <div class="main">
         <div class="home"><a href="index.html">На главную</a></div>
 
-        <form id="form">
+        <form id="form" action="form1.php">
             <input type="text" name="name" required="required"/>
             <input type="text" name="phone" required="required"/>
             <input type="submit" value="Заказать звонок"/>
@@ -51,7 +51,7 @@
                 success: function() {
                     //код в этом блоке выполняется при успешной отправке сообщения
                     alert("Ваше сообщение отпрвлено!");
-                });
+                }});
         });
     });
 </script>
